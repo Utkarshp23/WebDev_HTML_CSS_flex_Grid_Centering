@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+     body{
+       margin: 0;
+       padding: 0;
+       font-family: Kumbh Sans;
+       font-size: 18px;
+     }
+    .container{
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      background-color:hsl(185, 75%, 39%);
+      background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+      background-repeat: no-repeat, no-repeat;
+      background-position: -332px -550px ,638px 332px;
+      /* background-size: 100%; */
+      justify-content: center;
+      align-items: center;
+      /* border: 3px solid black; */
+    }
+
+    .card{
+       background-color:white;
+       height: 425px;
+       width: 375px;
+       /* border: 2px solid black; */
+       border-radius: 13px;
+       /* box-shadow: 5px 5px 10px hsl(0, 0%, 59%); */
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: center;
+       /* z-index: 1; */
+       position: relative;
+    }
+    .bg-pattern{
+      width: 375px;
+      height: 40%;
+      background: url(./images/bg-pattern-card.svg);
+      background-repeat: no-repeat ;
+      /* background-position: center ; */
+      background-size: cover;
+      border-top-left-radius: 13px;
+      border-top-right-radius: 13px;
+      
+    }
+    
+    .identity{
+      width: 100%;
+      height: 40%;
+       background-color:white;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+       position: relative;
+    }
+    .community{
+      width: 100%;
+      height: 20%;
+      background-color: white;
+      /* z-index: -1; */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom-left-radius: 13px;
+      border-bottom-right-radius: 13px;
+    }
+    .img-container{
+      /* margin: -50px; */
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: auto;
+      top: -52px;
+    }
+    .profile-pic{
+      border-radius: 50px;
+      z-index: 1;
+            /* margin-bottom: 100px; */
+    }
+    .text{
+      /* margin-top: 10px; */
+      margin: 0;
+      text-align: center;
+      position: absolute;
+      left: auto;
+      top: 84px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* position: relative; */
+    }
+    .flp{
+      height: 100%;
+      width: 33%;
+      /* margin: 1px; */
+      /* background-color: blueviolet; */
+      /* border: 2px solid red; */
+      /* text-align: center; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #left1{
+     border-bottom-left-radius: 13px;
+    }
+    #right1{
+     border-bottom-right-radius: 13px;
+    }
+    .up{
+     margin-top: 15px;
+     margin-bottom: 0;
+     font-weight: 700;
+     font-size: 20px;
+    } 
+    .down{
+      margin: 0;
+      margin-top: 8px;
+      font-size: 13px;
+      /* font-weight: 100; */
+
+     color: hsl(0, 0%, 59%);
+    }
+    #name{
+      font-weight: 700;
+      /* position: absolute;
+      left: auto; */
+      margin-bottom: 24px;
+      font-size: 20px;
+    }
+    
+    /* #left1, #mid{
+      border-right: 1px solid hsl(0, 0%, 59%);
+    } */
+
+    .half-circle{
+      position: absolute;
+      width: 108px;
+      height: 108px;
+      background-color: white;
+      border-radius: 50%;
+      top: 112px;
+      left:auto;
+    }  
+
+   .line {
+     position: absolute;
+     left: auto;
+     bottom: 18%;
+     width: 100%;
+     height: 1px;
+     background: hsl(0, 0%, 59%);
+   }
+
+   .age{
+     display: inline;
+     font-weight: normal;
+     color: hsl(0, 0%, 59%);
+     margin-left: 10px;
+   }
+   
+   #city{
+
+    color: hsl(0, 0%, 59%);
+   } 
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+       <div class="bg-pattern">
+         
+       </div>
+       <div class="identity">
+         <div class="img-container"> 
+           <img class="profile-pic" src="./images/image-victor.jpg" alt="">
+         </div>
+         <div class="text">
+           <div id="name">Victor Crest
+
+             <div class="age">26</div>
+           </div>
+           <div id="city">
+             London
+           </div>
+          </div>
+      </div>
+          
+
+       <div class="community">
+         <div class="flp" id="left1">
+           <div class="up">80K</div>
+           <div class="down">Followers</div>
+         
+        </div>
+         <div class="flp" id="mid">
+          <div class="up">803K</div>
+          <div class="down">Likes</div>
+          
+          
+         </div>
+         <div class="flp" id="right1">
+          <div class="up">1.4K</div>
+          <div class="down">Photos</div> 
+           
+          
+         </div>
+       </div>
+       <div class="half-circle"></div>
+       <div class="line"></div>
+         
+           
+       </div>
+    </div>
+  </div>
+
+  <!-- Victor Crest
+  26
+  London
+
+  80K
+  Followers
+
+  803K
+  Likes
+
+  1.4K
+  Photos
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
